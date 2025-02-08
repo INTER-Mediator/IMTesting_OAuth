@@ -13,7 +13,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-require_once(dirname(__FILE__) . '/lib/src/INTER-Mediator/INTER-Mediator.php');
+require_once('vendor/inter-mediator/inter-mediator/INTER-Mediator.php');
 
 IM_Entry(
     array(
@@ -56,12 +56,6 @@ IM_Entry(
     ),
     array(
         'authentication' => array( // table only, for all operations
-//            'user' => array('user1'), // Itemize permitted users
-//            'group' => array('group2'), // Itemize permitted groups
-            'user-table' => 'authuser', // Default value
-            'group-table' => 'authgroup',
-            'corresponding-table' => 'authcor',
-            'challenge-table' => 'issuedhash',
             'authexpired' => '60', // Set as seconds.
             'storing' => 'credential', // session-storage, 'cookie'(default), 'cookie-domainwide', 'none'
 //'saml-builtin-auth' => false,
