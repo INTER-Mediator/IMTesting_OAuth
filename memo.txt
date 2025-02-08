@@ -1,0 +1,33 @@
+IM Path
+/var/www/demo_im_com/saml-trial/lib/src/INTER-Mediator
+
+SAML Web Root
+/var/www/demo_im_com/saml-trial/lib/src/INTER-Mediator/vendor/simplesamlphp/simplesamlphp/www
+https://demo.inter-mediator.com/saml-trial/lib/src/INTER-Mediator/vendor/simplesamlphp/simplesamlphp/www
+
+Setup
+- INTER-Mediatorのサーバに、ide.inter-mediator.comを確保して、ここにIdPを構築している。
+管理ページ：https://idp.inter-mediator.com/simplesaml/module.php/core/frontpage_welcome.php
+管理ユーザ：admin/samltest9341
+- INTER-Mediatorのサーバーのdemoのところに、このsaml-trialディレクトリを配備。
+- lib/srcで、INTER-Mediatorをクローンし、そのディレクトリでcomposer updateする。ビルドしないで運用（定義ファイルはsrc以下を参照）
+
+INTER-Mediatorのアップデート
+- lib/src/INTER-Mediatorで、git pull origin master; composer updateをする。pullできない時は、git checkout .
+- lib/saml-configで、copyconfig.shを稼働する。これにより、lib/src/INTER-Mediatorの中のsimplesamlphpの設定ファイルをコピーする。つまり、このIM自身がSPとなる
+
+About Setup
+- アプリケーションが利用しているparams.phpは、lib/src/params.php
+
+$isSAML = true;
+$samlAuthSource = 'default-sp';
+$samlWithBuiltInAuth = true;
+
+テスト用アプリケーション
+https://demo.inter-mediator.com/saml-trial/chat.html
+
+なお、chat2.htmlはグループ名を記録してレコードごとの認証に使用するもの。
+
+IdPに登録されている正しいユーザ：user01/user01
+ログイン可能なネイティブユーザ：mig2/mig2
+ログインできないネイティブユーザ：user1/user1 ... 認証の設定は"2"にしているのでログインできないので正しい
