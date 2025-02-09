@@ -209,7 +209,7 @@ $fixed2FACode = "5555"; // Fixed 2FA code for the testing purpose. On the real s
 /* SAML Support
    Information about setting up a SAML Service Provider exists in the samples/saml-config directory. */
 $isSAML = true;
-$samlAuthSource = 'default-sp';
+$samlAuthSource = 'imtesting-sp';
 $samlWithBuiltInAuth = true;
 $samlExpiringSeconds = 60;
 //$samlWithBuiltInAuth = true;

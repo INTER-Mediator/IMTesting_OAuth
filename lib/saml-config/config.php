@@ -27,7 +27,7 @@ $config = [
      * external url, no matter where you come from (direct access or via the
      * reverse proxy).
      */
-    'baseurlpath' => 'IMTesting_SAML/vendor/simplesamlphp/simplesamlphp/www/',
+    'baseurlpath' => 'IMTesting_SAML/vendor/simplesamlphp/simplesamlphp/public/',
 
     /*
      * The 'application' configuration array groups a set configuration options
@@ -496,6 +496,7 @@ $config = [
      */
 
      'module.enable' => [
+	 'admin' => true,
          'exampleauth' => false,
          'core' => true,
          'saml' => true
@@ -578,7 +579,7 @@ $config = [
      * Example:
      *  'session.cookie.samesite' => 'None',
      */
-    'session.cookie.samesite' => \SimpleSAML\Utils\HTTP::canSetSameSiteNone() ? 'None' : null,
+    //'session.cookie.samesite' => \SimpleSAML\Utils\HTTP::canSetSameSiteNone() ? 'None' : null,
 
     /*
      * Options to override the default settings for php sessions.
@@ -806,7 +807,7 @@ $config = [
     'language.cookie.secure' => true,
     'language.cookie.httponly' => false,
     'language.cookie.lifetime' => (60 * 60 * 24 * 900),
-    'language.cookie.samesite' => \SimpleSAML\Utils\HTTP::canSetSameSiteNone() ? 'None' : null,
+//    'language.cookie.samesite' => \SimpleSAML\Utils\HTTP::canSetSameSiteNone() ? 'None' : null,
 
     /**
      * Custom getLanguage function called from SimpleSAML\Locale\Language::getLanguage().
