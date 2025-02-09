@@ -9,11 +9,12 @@ INTER-Mediatorのサイトに常設して、常にEnd-to-End Testができるよ
 ### SAML Web Root
 - /var/www/demo_im_com/IMTesting_SAML/vendor/simplesamlphp/simplesamlphp/public
 - https://demo.inter-mediator.com/IMTesting_SAML/vendor/simplesamlphp/simplesamlphp/public
+- Admin account of this sp: admin / samltest9341
 
 ### Setup
 - INTER-Mediatorのサーバに、ide.inter-mediator.comを確保して、ここにIdPを構築している。
 - 管理ページ：https://idp.inter-mediator.com/simplesaml/module.php/core/frontpage_welcome.php
-- 管理ユーザ：admin/samltest6932
+- 管理ユーザ：admin / samltest6932
 - INTER-Mediatorのサーバーのdemoのところに、このsaml-trialディレクトリを配備。
 - レポジトリのルートで、composer install すれば良い。
 
