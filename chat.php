@@ -52,6 +52,7 @@ IM_Entry(
                     'field' => 'groupname',
                 ),
             ),
+            'post-reconstruct' => true,
         ),
     ),
     array(
