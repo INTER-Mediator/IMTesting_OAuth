@@ -181,7 +181,7 @@ $fixed2FACode = "5555"; // Fixed 2FA code for the testing purpose. On the real s
 
 //$emailAsAliasOfUserName = true;
 //$passwordPolicy = "useAlphabet useNumber useUpper useLower usePunctuation length(10) notUserName";
-//$defaultGroupName = "users"; // For the user who doesn't belong to any group, this group automatically attaches to such a user
+$defaultGroupName = "Users"; // For the user who doesn't belong to any group, this group automatically attaches to such a user
 
 // An enrollment page and a password reset page are going to show on login panel.
 //$resetPage = '...url...';
