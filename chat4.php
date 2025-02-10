@@ -57,9 +57,11 @@ IM_Entry(
     ),
     array(
         'authentication' => array( // table only, for all operations
+            'is-saml' => false,
+//            'saml-builtin-auth' => false,
+//            'user' => ['user1', 'user01'],
             'authexpired' => '60', // Set as seconds.
             'storing' => 'credential', // session-storage, 'cookie'(default), 'cookie-domainwide', 'none'
-//'saml-builtin-auth' => false,
         ),
     ),
     array('db-class' => 'PDO'),

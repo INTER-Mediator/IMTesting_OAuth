@@ -13,7 +13,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
     <title>INTER-Mediator - Sample - Authorized Chat / MySQL</title>
-    <script type="text/javascript" src="chat.php"></script>
+    <script type="text/javascript" src="chat4.php"></script>
     <script type="text/javascript" src="chat.js"></script>
 </head>
 <body>
@@ -21,10 +21,10 @@
     <h1>Simple but Authorized Chat</h1>
     <div><a href="index.html">← Top Page</a></div>
     <div data-im-control="enclosure post">
-                <span data-im-control="repeater">
-                    <input type="text" data-im="chat2@message">
-                    <button data-im-control="post">Post</button>
-                </span>
+        <span data-im-control="repeater">
+            <input type="text" data-im="chat@message">
+            <button data-im-control="post">Post</button>
+        </span>
         <button onclick="javascript:INTERMediatorOnPage.logout()">Logout</button>
     </div>
     <table>
@@ -38,10 +38,10 @@
         </thead>
         <tbody>
         <tr>
-            <td data-im="chat2@postdt" data-im-format="datetime(middle)"></td>
-            <td data-im="chat2@user"></td>
-            <td data-im="chat2@groupname"></td>
-            <td data-im="chat2@message"></td>
+            <td data-im="chat@postdt" data-im-format="datetime(middle)"></td>
+            <td data-im="chat@user"></td>
+            <td data-im="chat@groupname"></td>
+            <td data-im="chat@message"></td>
         </tr>
         </tbody>
     </table>
