@@ -1,3 +1,3 @@
-INTERMediatorOnPage.doAfterConstruct = function () {
+INTERMediatorOnPage.doBeforeConstruct = function () {
   INTERMediatorLog.suppressDebugMessageOnPage = true;
 }
