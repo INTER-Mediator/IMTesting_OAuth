@@ -6,14 +6,14 @@
  *
  * INTER-Mediator is supplied under MIT License.
  * Please see the full license for details:
- * https://github.com/INTER-Mediator/INTER-Mediator/blob/master/dist-docs/License.txt
+ * https://github.com/msyk/inter-mediator/blob/master/dist-docs/License.txt
  *
  * @copyright     Copyright (c) INTER-Mediator Directive Committee (http://inter-mediator.org)
  * @link          https://inter-mediator.com/
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-require_once('vendor/inter-mediator/inter-mediator/INTER-Mediator.php');
+require_once('vendor/msyk/inter-mediator/INTER-Mediator.php');
 
 IM_Entry(
     array(
@@ -33,6 +33,7 @@ IM_Entry(
                     'field' => 'user',
                 ),
             ),
+            'post-reconstruct' => true,
         ),
         array(
             'records' => 100000000,
@@ -46,21 +47,12 @@ IM_Entry(
             'default-values' => array(
                 array('field' => 'postdt', 'value' => date("Y-m-d H:i:s")),
             ),
-            'authentication' => array(
-                'all' => array( // load, update, new, delete
-                    'target' => 'field-group',
-                    'field' => 'groupname',
-                ),
-            ),
             'post-reconstruct' => true,
         ),
     ),
     array(
         'authentication' => array( // table only, for all operations
-            'is-saml' => false,
-//            'saml-builtin-auth' => false,
-//            'user' => ['user1', 'user01'],
-            'authexpired' => '60', // Set as seconds.
+            'authexpired' => '600', // Set as seconds.
             'storing' => 'credential', // session-storage, 'cookie'(default), 'cookie-domainwide', 'none'
         ),
     ),
