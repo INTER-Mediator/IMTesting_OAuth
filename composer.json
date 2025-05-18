@@ -1,13 +1,7 @@
 {
   "name": "inter-mediator/imtesting_oauth",
   "version": "1",
-  "time": "2025-03-30",
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/INTER-Mediator/IMTesting_OAuth.git"
-    }
-  ],
+  "time": "2025-05-18",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
@@ -20,7 +14,7 @@
   "keywords": [
     "INTER-Mediator",
     "application",
-    "bbs",
+    "oauth",
     "sample",
     "testing"
   ],
