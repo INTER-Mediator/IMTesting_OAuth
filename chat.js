@@ -4,5 +4,5 @@ INTERMediatorOnPage.doBeforeConstruct = function () {
 }
 
 INTERMediatorOnPage.doAfterConstruct = function () {
-  document.querySelector("#loginuser").innerHTML = INTERMediatorOnPage.authUser()
+  document.querySelector("#loginuser").innerHTML = IMLibAuthentication.authUser()
 }
