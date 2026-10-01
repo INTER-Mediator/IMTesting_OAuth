@@ -6,7 +6,7 @@
   "prefer-stable": true,
   "require": {
     "php": ">=8.1.0",
-    "inter-mediator/inter-mediator": "dev-master"
+    "inter-mediator/inter-mediator": "dev-Ver.16-PHP8.3"
   },
   "repositories": [
     {
@@ -44,22 +44,13 @@
     ],
     "clear": [
       "rm -rf node_modules vendor"
-    ],
-    "post-update-cmd": [
-      "cd ./vendor/inter-mediator/inter-mediator; npm install",
-      "cd ./vendor/inter-mediator/inter-mediator; npm update",
-      "cd ./vendor/inter-mediator/inter-mediator/dist-docs; ./generateminifyjshere.sh"
-    ],
-    "post-install-cmd": [
-      "cd ./vendor/inter-mediator/inter-mediator; npm install",
-      "cd ./vendor/inter-mediator/inter-mediator/dist-docs; ./generateminifyjshere.sh"
     ]
   },
   "config": {
     "allow-plugins": {
       "simplesamlphp/composer-module-installer": true,
       "simplesamlphp/composer-xmlprovider-installer": true,
-      "mouf/nodejs-installer": true
+      "inter-mediator/inter-mediator": true
     }
   }
 }
